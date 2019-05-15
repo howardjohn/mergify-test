@@ -1,5 +1,9 @@
 some line
 
+<<<<<<< HEAD
 other release
 
 new line
+=======
+other stable
+>>>>>>> 0b030d6... introduce conflict (#10)
