@@ -1,61 +1,53 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-assignees:
-  - howardjohn
+name: Bug report
+description: Report a bug to help us improve Istio
+title: ""
 body:
   - type: markdown
     attributes:
       value: |
         Thanks for taking the time to fill out this bug report!
-  - type: input
-    id: contact
-    attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
-    validations:
-      required: false
   - type: textarea
-    id: what-happened
+    id: bug-description
     attributes:
-      label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      label: Bug Description
+      placeholder: Tell us what issues you ran into
     validations:
       required: true
-  - type: dropdown
+  - type: textarea
     id: version
     attributes:
       label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+      description: Include the output of `istioctl version`, `kubectl version --short`, and `helm version --short` (if you used Helm)
+    render: prose
     validations:
       required: true
-  - type: dropdown
-    id: browsers
+  - type: checkboxes
+    id: area
     attributes:
-      label: What browsers are you seeing the problem on?
+      label: Affected product area
       multiple: true
       options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
+      - label: Docs
+      - label: Installation
+      - label: Networking
+      - label: Performance and Scalability
+      - label: Extensions and Telemetry
+      - label: Security
+      - label: Test and Release
+      - label: User Experience
+      - label: Developer Infrastructure
+      - label: Upgrade
   - type: checkboxes
-    id: terms
+    id: security
     attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      label: Is this the right place to submit this?
+      description: |-
+        This is used to report product bugs:
+        To report a security vulnerability, please visit <https://istio.io/about/security-vulnerabilities>
+        To ask questions about how to use Istio, please visit <https://discuss.istio.io>
+      multiple: true
       options:
-        - label: I agree to follow this project's Code of Conduct
+        - label: This is not a security vulnerability
+          required: true
+        - label: This is not a question about how to use Istio
           required: true
