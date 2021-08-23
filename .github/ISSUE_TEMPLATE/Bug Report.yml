@@ -25,16 +25,7 @@ body:
     attributes:
       label: Affected product area
       options:
-      - label: "Docs"
-      - label: "Installation"
-      - label: "Networking"
-      - label: "Performance and Scalability"
-      - label: "Extensions and Telemetry"
-      - label: "Security"
       - label: "Test and Release"
-      - label: "User Experience"
-      - label: "Developer Infrastructure"
-      - label: "Upgrade"
   - type: checkboxes
     id: security
     attributes:
