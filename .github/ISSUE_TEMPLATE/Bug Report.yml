@@ -25,16 +25,16 @@ body:
     attributes:
       label: Affected product area
       options:
-      - label: Docs
-      - label: Installation
-      - label: Networking
-      - label: Performance and Scalability
-      - label: Extensions and Telemetry
-      - label: Security
-      - label: Test and Release
-      - label: User Experience
-      - label: Developer Infrastructure
-      - label: Upgrade
+      - label: "Docs"
+      - label: "Installation"
+      - label: "Networking"
+      - label: "Performance and Scalability"
+      - label: "Extensions and Telemetry"
+      - label: "Security"
+      - label: "Test and Release"
+      - label: "User Experience"
+      - label: "Developer Infrastructure"
+      - label: "Upgrade"
   - type: checkboxes
     id: security
     attributes:
@@ -44,7 +44,7 @@ body:
         To report a security vulnerability, please visit <https://istio.io/about/security-vulnerabilities>
         To ask questions about how to use Istio, please visit <https://discuss.istio.io>
       options:
-        - label: This is not a security vulnerability
+        - label: "This is not a security vulnerability"
           required: true
-        - label: This is not a question about how to use Istio
+        - label: "This is not a question about how to use Istio"
           required: true
